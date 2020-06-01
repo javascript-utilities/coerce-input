@@ -6,7 +6,7 @@
 
 Coerces values into JavaScript object types where available
 
-## [![Byte size of Coerce][badge__master__coerce__source_code]][coerce__master__source_code] [![Open Issues][badge__issues__coerce]][issues__coerce] [![Open Pull Requests][badge__pull_requests__coerce]][pull_requests__coerce] [![Latest commits][badge__commits__coerce__master]][commits__coerce__master] [![Coerce Demo][badge__gh_pages__coerce]][gh_pages__coerce]
+## [![Byte size of Coerce][badge__master__coerce__source_code]][coerce__master__source_code] [![Open Issues][badge__issues__coerce]][issues__coerce] [![Open Pull Requests][badge__pull_requests__coerce]][pull_requests__coerce] [![Build Test Status][badge__travis_ci__coerce]][travis_ci__coerce] [![Latest commits][badge__commits__coerce__master]][commits__coerce__master] [![Coerce Demo][badge__gh_pages__coerce]][gh_pages__coerce]
 
 
 ------
@@ -359,3 +359,10 @@ For further details review full length version of [AGPL-3.0][branch__current__li
 
 [badge__master__coerce__source_code]:
   https://img.shields.io/github/repo-size/javascript-utilities/coerce
+
+[badge__travis_ci__coerce]:
+  https://img.shields.io/travis/javascript-utilities/coerce/master.svg
+
+[travis_ci__coerce]:
+  https://travis-ci.com/javascript-utilities/coerce
+  "&#x1F6E0; Automated tests with Jest and build logs"

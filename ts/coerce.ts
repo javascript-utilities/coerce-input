@@ -7,13 +7,13 @@
  * @author S0AndS0
  * @license AGPL-3.0
  * @example
- * coerce('1');
+ * Coerce('1');
  * //> 1
  *
- * coerce('stringy');
+ * Coerce('stringy');
  * //> "stringy"
  *
- * coerce('{"key": "value"}');
+ * Coerce('{"key": "value"}');
  * //> {key: "value"}
  */
 const Coerce = (value: any): any => {

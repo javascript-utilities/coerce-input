@@ -4,8 +4,8 @@
   "description": "Coerces values to JavaScript Objects where possible",
   "main": "coerce.ts",
   "scripts": {
-    "ci-test": "jest --coverage",
     "ts-build": "tsc --build",
+    "ci-test": "jest --coverage",
     "ci-build": "npm run ts-build && npm run ci-test",
     "ci-watch": "jest --coverage --watchAll",
     "py-serve": "python3 -m http.server --bind localhost 8080"
@@ -61,8 +61,5 @@
     "jest": "^26.0.1",
     "ts-jest": "^26.0.0",
     "typescript": "^3.9.3"
-  },
-  "dependencies": {
-    "remove": "^0.1.5"
   }
 }

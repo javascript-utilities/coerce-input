@@ -1,35 +1,35 @@
-## Note, "[ci skio]" or "[skip ci]" within a commit message _should_
+## Note, "[ci skip]" or "[skip ci]" within a commit message _should_
 ##  cause Travis Continuous Integration to skip the following
 
 
 ## Clone settings for repository
-##   1. reduce log _fluff_ with `true`
-##   2. clone submodules when cloning this branch with `true`
-##   3. clone the whole Git history with `false`, or set integer limit
+##   1. Reduce log _fluff_ with `true`
+##   2. Clone submodules when cloning this branch with `true`
+##   3. Clone the whole Git history with `false`, or set integer limit
 git:
   quite: false
-  submodules: false
+  submodules: true
   depth: false
 
 
 ## The dialect that will be spoken
-##   1. really what Jest speeks
-##   2. version of `node_js` to target
+##   1. Really what Jest speaks
+##   2. Version of `node_js` to target
 language: node_js
 node_js:
   - "10"
 
 
 ## Things to keep between CI runs
-##   keep `node_modules` subdirectory to speed up future tests, maybe?
+##   keep `node_modules` sub-directory to speed up future tests, maybe?
 cache:
   directories:
     - node_modules
 
 
 ## Operating systems to spin-up
-##   1. when `true` some blocks such as `script` terminates at first failure
-##   2. list of OS configurations (FrontMater _blocks_) Travis should test with
+##   1. When `true` some blocks such as `script` terminates at first failure
+##   2. List of OS configurations (FrontMater _blocks_) Travis should test with
 matrix:
   fast_finish: true
   include:
@@ -39,9 +39,9 @@ matrix:
       dist: xenial
 
 
-## Retrict what branches are cloned with Git
-##   1. fetch `only` `gh-pages` or _`test-`_ prefixed branches
-##   2. specifically ignore fetching the `master` branch
+## Restrict what branches are cloned with Git
+##   1. Fetch `only` `gh-pages` or _`test-`_ prefixed branches
+##   2. Specifically ignore fetching the `master` branch
 branches:
   only:
     - master

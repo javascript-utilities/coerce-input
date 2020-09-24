@@ -57,7 +57,7 @@
   },
   "homepage": "https://github.com/javascript-utilities/coerce#readme",
   "devDependencies": {
-    "@types/jest": "^26.0.13",
+    "@types/jest": "^26.0.14",
     "jest": "^26.4.2",
     "ts-jest": "^26.4.0",
     "typescript": "^4.0.2"

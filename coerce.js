@@ -31,6 +31,12 @@ const Coerce = (value) => {
         else if (['NaN', NaN].includes(value)) {
             return NaN;
         }
+        else if (['Infinity', Infinity].includes(value)) {
+            return Infinity;
+        }
+        else if (['-Infinity', -Infinity].includes(value)) {
+            return -Infinity;
+        }
         else {
             return value;
         }

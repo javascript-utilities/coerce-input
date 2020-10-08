@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+
+
 /**
  * @author S0AndS0
  * @copyright AGPL-3.0
@@ -20,6 +23,7 @@ class Coerce_Test {
     this.testsArray();
     this.testsBoolean();
     this.testsDictionary();
+    this.testsInfinity();
     this.testsNaN();
     this.testsNull();
     this.testsNumber();
@@ -81,6 +85,27 @@ class Coerce_Test {
       const received = '{"nummber_array": [1, 2.5, 3]}';
       const expected = {nummber_array: [1, 2.5, 3]};
       expect(this.coerce(received)).toStrictEqual(expected);
+    });
+  }
+
+  /**
+   *
+   */
+  testsInfinity() {
+    test('Is "Infinity" coerced to a Number?', () => {
+      expect(this.coerce("Infinity")).toBe(Infinity);
+    });
+
+    test('Is `Infinity` coerced to a Number?', () => {
+      expect(this.coerce(Infinity)).toBe(Infinity);
+    });
+
+    test('Is "-Infinity" coerced to a Number?', () => {
+      expect(this.coerce("-Infinity")).toBe(-Infinity);
+    });
+
+    test('Is `-Infinity` coerced to a Number?', () => {
+      expect(this.coerce(-Infinity)).toBe(-Infinity);
     });
   }
 

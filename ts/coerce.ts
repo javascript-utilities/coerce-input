@@ -1,3 +1,6 @@
+'use strict';
+
+
 /**
  * Coerces values into JavaScript object types where available
  * @function Coerce

@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Coerces values into JavaScript object types where available
  * @function Coerce
@@ -46,3 +47,4 @@ const Coerce = (value) => {
 if (typeof module !== 'undefined') {
     module.exports = Coerce;
 }
+//# sourceMappingURL=coerce.js.map

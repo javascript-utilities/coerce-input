@@ -17,7 +17,7 @@
  * Coerce('{"key": "value"}');
  * //> {key: "value"}
  */
-const Coerce = (value) => {
+const Coerce_Input = (value) => {
     try {
         return JSON.parse(value);
     }
@@ -45,6 +45,6 @@ const Coerce = (value) => {
 };
 /* istanbul ignore next */
 if (typeof module !== 'undefined') {
-    module.exports = Coerce;
+    module.exports = { Coerce_Input };
 }
-//# sourceMappingURL=coerce.js.map
+//# sourceMappingURL=coerce-input.js.map

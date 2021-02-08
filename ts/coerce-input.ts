@@ -19,7 +19,7 @@
  * Coerce('{"key": "value"}');
  * //> {key: "value"}
  */
-const Coerce = (value: any): any => {
+const Coerce_Input = (value: any): any => {
   try {
     return JSON.parse(value);
   } catch (e) {
@@ -45,5 +45,5 @@ const Coerce = (value: any): any => {
 
 /* istanbul ignore next */
 if (typeof module !== 'undefined') {
-  module.exports = Coerce;
+  module.exports = { Coerce_Input };
 }

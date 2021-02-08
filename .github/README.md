@@ -6,10 +6,11 @@
 
 Coerces values into JavaScript object types where available
 
+
 ## [![Byte size of Coerce][badge__master__coerce__source_code]][coerce__master__source_code] [![Open Issues][badge__issues__coerce]][issues__coerce] [![Open Pull Requests][badge__pull_requests__coerce]][pull_requests__coerce] [![Build Test Status][badge__travis_ci__coerce]][travis_ci__coerce] [![Latest commits][badge__commits__coerce__master]][commits__coerce__master] [![Coerce Demo][badge__gh_pages__coerce]][gh_pages__coerce]
 
 
-------
+---
 
 
 - [:arrow_up: Top of Document][heading__top]
@@ -29,7 +30,7 @@ Coerces values into JavaScript object types where available
 - [:balance_scale: Licensing][heading__license]
 
 
-------
+---
 
 
 
@@ -50,7 +51,7 @@ npm install
 > Note NPM is only required if adding features and/or fixing bugs, ie. there are **no** NPM based dependencies for utilizing this repository within other projects.
 
 
-___
+______
 
 
 ## Quick Start
@@ -148,7 +149,7 @@ git push origin gh-pages
 **:tada: Excellent :tada:** your project is now ready to begin unitizing code from this repository!
 
 
-------
+---
 
 
 ### Usage
@@ -237,7 +238,7 @@ window.addEventListener('load', () => {
 ```
 
 
-___
+______
 
 
 ## Notes
@@ -261,7 +262,7 @@ This repository may not be feature complete and/or fully functional, Pull Reques
 - Tests can be preformed via `npm run ci-test`
 
 
-___
+______
 
 
 ## Attribution
@@ -275,7 +276,7 @@ ___
 - [Medium -- Writing unit tests in TypeScript](https://medium.com/@RupaniChirag/writing-unit-tests-in-typescript-d4719b8a0a40)
 
 
-___
+______
 
 
 ## License
@@ -299,7 +300,6 @@ GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
 ```
 
 
@@ -366,3 +366,4 @@ For further details review full length version of [AGPL-3.0][branch__current__li
 [travis_ci__coerce]:
   https://travis-ci.com/javascript-utilities/coerce
   "&#x1F6E0; Automated tests with Jest and build logs"
+

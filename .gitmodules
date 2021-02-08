@@ -1,4 +1,4 @@
 [submodule "coerce"]
-	path = assets/js/modules/coerce
+	path = assets/js/modules/coerce-input
 	url = https://github.com/javascript-utilities/coerce.git
 	branch = master

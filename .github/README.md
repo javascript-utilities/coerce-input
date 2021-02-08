@@ -1,13 +1,13 @@
-# Coerce
+# Coerce Input
 [heading__top]:
-  #coerce
+  #coerce-input
   "&#x2B06; Coerces values into JavaScript object types where available"
 
 
 Coerces values into JavaScript object types where available
 
 
-## [![Byte size of Coerce][badge__master__coerce__source_code]][coerce__master__source_code] [![Open Issues][badge__issues__coerce]][issues__coerce] [![Open Pull Requests][badge__pull_requests__coerce]][pull_requests__coerce] [![Build Test Status][badge__travis_ci__coerce]][travis_ci__coerce] [![Latest commits][badge__commits__coerce__master]][commits__coerce__master] [![Coerce Demo][badge__gh_pages__coerce]][gh_pages__coerce]
+## [![Byte size of Coerce][badge__master__coerce_input__source_code]][coerce_input__master__source_code] [![Open Issues][badge__issues__coerce_input]][issues__coerce_input] [![Open Pull Requests][badge__pull_requests__coerce_input]][pull_requests__coerce_input] [![Build Test Status][badge__travis_ci__coerce_input]][travis_ci__coerce_input] [![Latest commits][badge__commits__coerce_input__master]][commits__coerce_input__master] [![Coerce Demo][badge__gh_pages__coerce_input]][gh_pages__coerce_input]
 
 
 ---
@@ -67,8 +67,8 @@ For projects on GitHub Pages, this repository encourages the use of Git Submodul
 
 
 ```Bash
-_module_name='coerce'
-_module_https_url="https://github.com/javascript-utilities/coerce.git"
+_module_name='coerce-input'
+_module_https_url="https://github.com/javascript-utilities/coerce-input.git"
 _module_base_dir='assets/js/modules'
 _module_path="${_module_base_dir}/${_module_name}"
 ```
@@ -127,7 +127,7 @@ git add "${_module_path}"
 
 
 git commit -F- <<'EOF'
-:heavy_plus_sign: Adds `javascript-utilities/coerce#1` submodule
+:heavy_plus_sign: Adds `javascript-utilities/coerce-input#1` submodule
 
 
 
@@ -138,7 +138,7 @@ git commit -F- <<'EOF'
 
 - `README.md`, updates installation and updating guidance
 
-- `_modules_/coerce`, Coerces values into JavaScript object types where available
+- `_modules_/coerce-input`, Coerces values into JavaScript object types where available
 EOF
 
 
@@ -158,7 +158,7 @@ git push origin gh-pages
   "&#x1F9F0;"
 
 
-> Note, there are [![Coerce Demo][badge__gh_pages__coerce]][gh_pages__coerce] hosted by GitHub pages, the source code of which is available within the [`gh-pages`][coerce__gh_pages__source_code] branch of this repository.
+> Note, there are [![Coerce Demo][badge__gh_pages__coerce_input]][gh_pages__coerce_input] hosted by GitHub pages, the source code of which is available within the [`gh-pages`][coerce_input__gh_pages__source_code] branch of this repository.
 
 
 **`index.html`**
@@ -169,7 +169,7 @@ git push origin gh-pages
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script type="text/javascript" src="assets/js/modules/coerce/coerce.js" differ></script>
+    <script type="text/javascript" src="assets/js/modules/coerce-input/coerce-input.js" differ></script>
     <script type="text/javascript" src="assets/js/index.js" differ></script>
     <title>Test Value Coercion</title>
   </head>
@@ -187,29 +187,29 @@ git push origin gh-pages
 ```JavaScript
 const text_input__callback = (event) => {
   const client_input = event.target.value;
-  const coerced_value = Coerce(client_input);
+  const coerce-inputd_value = Coerce(client_input);
   const client_text_output = document.getElementById('client__text--output');
-  const output_list = [ `typeof -> ${typeof coerced_value}` ];
+  const output_list = [ `typeof -> ${typeof coerce-inputd_value}` ];
 
   // Build pretty formatted output
-  switch (typeof coerced_value) {
+  switch (typeof coerce-inputd_value) {
     case "string":
-      if (coerced_value.length === 0) {
+      if (coerce-inputd_value.length === 0) {
         output_list.push('<empty string>');
       } else {
-        output_list.push(`"${coerced_value.replace(/"/g, '\\"')}"`);
+        output_list.push(`"${coerce-inputd_value.replace(/"/g, '\\"')}"`);
       }
       break;
 
     case "object":
-      if (Array.isArray(coerced_value)) {
-        output_list.push(`Array [ ${coerced_value} ]`);
+      if (Array.isArray(coerce-inputd_value)) {
+        output_list.push(`Array [ ${coerce-inputd_value} ]`);
       } else {
-        if (Object.keys(coerced_value).length === 0) {
+        if (Object.keys(coerce-inputd_value).length === 0) {
           output_list.push('Object {  }');
         } else {
           output_list.push('Object {');
-          Object.entries(coerced_value).reduce((accumulator, [key, value], index, array) => {
+          Object.entries(coerce-inputd_value).reduce((accumulator, [key, value], index, array) => {
             let entry = `  ${key}: ${value}`;
             if (index < array.length - 1) {
               entry += ',';
@@ -223,10 +223,10 @@ const text_input__callback = (event) => {
       break;
 
     default:
-      output_list.push(coerced_value);
+      output_list.push(coerce-inputd_value);
   }
 
-  console.log(coerced_value);
+  console.log(coerce-inputd_value);
   client_text_output.innerText = output_list.join('\n');
 };
 
@@ -246,6 +246,8 @@ ______
   #notes
   "&#x1F5D2; Additional things to keep in mind when developing"
 
+
+**Warning** if upgrading from `v0.0.1` to `v0.1.0` (or greater) then beware that this repository has been renamed from `coerce` to `coerce-input`
 
 This repository may not be feature complete and/or fully functional, Pull Requests that add features or fix bugs are certainly welcomed.
 
@@ -312,58 +314,58 @@ For further details review full length version of [AGPL-3.0][branch__current__li
   "&#x2696; Full length version of AGPL-3.0 License"
 
 
-[badge__commits__coerce__master]:
-  https://img.shields.io/github/last-commit/javascript-utilities/coerce/master.svg
+[badge__commits__coerce_input__master]:
+  https://img.shields.io/github/last-commit/javascript-utilities/coerce-input/master.svg
 
-[commits__coerce__master]:
-  https://github.com/javascript-utilities/coerce/commits/master
+[commits__coerce_input__master]:
+  https://github.com/javascript-utilities/coerce-input/commits/master
   "&#x1F4DD; History of changes on this branch"
 
 
-[coerce__community]:
-  https://github.com/javascript-utilities/coerce/community
+[coerce_input__community]:
+  https://github.com/javascript-utilities/coerce-input/community
   "&#x1F331; Dedicated to functioning code"
 
-[coerce__gh_pages]:
-  https://github.com/javascript-utilities/coerce/tree/
+[coerce_input__gh_pages]:
+  https://github.com/javascript-utilities/coerce-input/tree/
   "Source code examples hosted thanks to GitHub Pages!"
 
-[badge__gh_pages__coerce]:
-  https://img.shields.io/website/https/javascript-utilities.github.io/coerce/index.html.svg?down_color=darkorange&down_message=Offline&label=Demo&logo=Demo%20Site&up_color=success&up_message=Online
+[badge__gh_pages__coerce_input]:
+  https://img.shields.io/website/https/javascript-utilities.github.io/coerce-input/index.html.svg?down_color=darkorange&down_message=Offline&label=Demo&logo=Demo%20Site&up_color=success&up_message=Online
 
-[gh_pages__coerce]:
-  https://javascript-utilities.github.io/coerce/index.html
+[gh_pages__coerce_input]:
+  https://javascript-utilities.github.io/coerce-input/index.html
   "&#x1F52C; Check the example collection tests"
 
-[coerce__gh_pages__source_code]:
-  https://github.com/javascript-utilities/coerce/tree/gh-pages
+[coerce_input__gh_pages__source_code]:
+  https://github.com/javascript-utilities/coerce-input/tree/gh-pages
   "Source code gh-pages branch for live demos"
 
-[issues__coerce]:
-  https://github.com/javascript-utilities/coerce/issues
+[issues__coerce_input]:
+  https://github.com/javascript-utilities/coerce-input/issues
   "&#x2622; Search for and _bump_ existing issues or open new issues for project maintainer to address."
 
-[pull_requests__coerce]:
-  https://github.com/javascript-utilities/coerce/pulls
+[pull_requests__coerce_input]:
+  https://github.com/javascript-utilities/coerce-input/pulls
   "&#x1F3D7; Pull Request friendly, though please check the Community guidelines"
 
-[coerce__master__source_code]:
-  https://github.com/javascript-utilities/coerce/
+[coerce_input__master__source_code]:
+  https://github.com/javascript-utilities/coerce-input/
   "&#x2328; Project source!"
 
-[badge__issues__coerce]:
-  https://img.shields.io/github/issues/javascript-utilities/coerce.svg
+[badge__issues__coerce_input]:
+  https://img.shields.io/github/issues/javascript-utilities/coerce-input.svg
 
-[badge__pull_requests__coerce]:
-  https://img.shields.io/github/issues-pr/javascript-utilities/coerce.svg
+[badge__pull_requests__coerce_input]:
+  https://img.shields.io/github/issues-pr/javascript-utilities/coerce-input.svg
 
-[badge__master__coerce__source_code]:
-  https://img.shields.io/github/repo-size/javascript-utilities/coerce
+[badge__master__coerce_input__source_code]:
+  https://img.shields.io/github/repo-size/javascript-utilities/coerce-input
 
-[badge__travis_ci__coerce]:
-  https://img.shields.io/travis/javascript-utilities/coerce/master.svg
+[badge__travis_ci__coerce_input]:
+  https://img.shields.io/travis/javascript-utilities/coerce-input/master.svg
 
-[travis_ci__coerce]:
-  https://travis-ci.com/javascript-utilities/coerce
+[travis_ci__coerce_input]:
+  https://travis-ci.com/javascript-utilities/coerce-input
   "&#x1F6E0; Automated tests with Jest and build logs"
 

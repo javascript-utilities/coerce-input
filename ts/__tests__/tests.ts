@@ -6,14 +6,14 @@
  * @copyright AGPL-3.0
  * @example <caption>Jest Tests for Coerce</caption>
  * // Initialize new class instance and run tests
- * const test_coerce = new Coerce_Test();
- * test_coerce.runTests();
+ * const test_coerce_input = new Coerce_Test();
+ * test_coerce_input.runTests();
  */
 class Coerce_Test {
-  coerce: Function;
+  coerce_input: Function;
 
   constructor() {
-    this.coerce = require('../coerce.js');
+    this.coerce_input = require('../coerce-input').Coerce_Input;
   }
 
   /**
@@ -36,19 +36,19 @@ class Coerce_Test {
    */
   testsArray() {
     test('Does square brackets without content equal an empty Array?', () => {
-      expect(this.coerce('[]')).toStrictEqual([]);
+      expect(this.coerce_input('[]')).toStrictEqual([]);
     });
 
     test('Will square brackets with numbers equal a numerical Array?', () => {
-      expect(this.coerce('[1, 2.5, 3]')).toStrictEqual([1, 2.5, 3]);
+      expect(this.coerce_input('[1, 2.5, 3]')).toStrictEqual([1, 2.5, 3]);
     });
 
     test('Do square brackets with strings equal a _stringy_ Array?', () => {
-      expect(this.coerce('["spam", "flavored", "ham"]')).toStrictEqual(["spam", "flavored", "ham"]);
+      expect(this.coerce_input('["spam", "flavored", "ham"]')).toStrictEqual(["spam", "flavored", "ham"]);
     });
 
     test('Will square brackets with numbers and _stringy_ numbers equal a mixed Array?', () => {
-      expect(this.coerce('[1, "2.5", 3]')).toStrictEqual([1, "2.5", 3]);
+      expect(this.coerce_input('[1, "2.5", 3]')).toStrictEqual([1, "2.5", 3]);
     });
   }
 
@@ -56,20 +56,20 @@ class Coerce_Test {
    *
    */
   testsBoolean() {
-    test('Is "true" coerced to `true`?', () => {
-      expect(this.coerce("true")).toBe(true);
+    test('Is "true" coerce_inputd to `true`?', () => {
+      expect(this.coerce_input("true")).toBe(true);
     });
 
     test('Will `true` remain `true`?', () => {
-      expect(this.coerce(true)).toBe(true);
+      expect(this.coerce_input(true)).toBe(true);
     });
 
-    test('Is "false" coerced to `false`?', () => {
-      expect(this.coerce("false")).toBe(false);
+    test('Is "false" coerce_inputd to `false`?', () => {
+      expect(this.coerce_input("false")).toBe(false);
     });
 
     test('Will `false` remain `false`?', () => {
-      expect(this.coerce(false)).toBe(false);
+      expect(this.coerce_input(false)).toBe(false);
     });
   }
 
@@ -77,14 +77,14 @@ class Coerce_Test {
    *
    */
   testsDictionary() {
-    test('Are empty curly braces coerced to an Object?', () => {
-      expect(this.coerce('{}')).toStrictEqual({});
+    test('Are empty curly braces coerce_inputd to an Object?', () => {
+      expect(this.coerce_input('{}')).toStrictEqual({});
     });
 
-    test('Will JSON with embeded Array coerce to an Object?', () => {
+    test('Will JSON with embeded Array coerce_input to an Object?', () => {
       const received = '{"nummber_array": [1, 2.5, 3]}';
       const expected = {nummber_array: [1, 2.5, 3]};
-      expect(this.coerce(received)).toStrictEqual(expected);
+      expect(this.coerce_input(received)).toStrictEqual(expected);
     });
   }
 
@@ -92,20 +92,20 @@ class Coerce_Test {
    *
    */
   testsInfinity() {
-    test('Is "Infinity" coerced to a Number?', () => {
-      expect(this.coerce("Infinity")).toBe(Infinity);
+    test('Is "Infinity" coerce_inputd to a Number?', () => {
+      expect(this.coerce_input("Infinity")).toBe(Infinity);
     });
 
-    test('Is `Infinity` coerced to a Number?', () => {
-      expect(this.coerce(Infinity)).toBe(Infinity);
+    test('Is `Infinity` coerce_inputd to a Number?', () => {
+      expect(this.coerce_input(Infinity)).toBe(Infinity);
     });
 
-    test('Is "-Infinity" coerced to a Number?', () => {
-      expect(this.coerce("-Infinity")).toBe(-Infinity);
+    test('Is "-Infinity" coerce_inputd to a Number?', () => {
+      expect(this.coerce_input("-Infinity")).toBe(-Infinity);
     });
 
-    test('Is `-Infinity` coerced to a Number?', () => {
-      expect(this.coerce(-Infinity)).toBe(-Infinity);
+    test('Is `-Infinity` coerce_inputd to a Number?', () => {
+      expect(this.coerce_input(-Infinity)).toBe(-Infinity);
     });
   }
 
@@ -114,7 +114,7 @@ class Coerce_Test {
    */
   testsEmpty() {
     test('Will empty input result in error?', () => {
-      expect(this.coerce()).toThrowError();
+      expect(this.coerce_input()).toThrowError();
     });
   }
 
@@ -122,12 +122,12 @@ class Coerce_Test {
    *
    */
   testsNaN() {
-    test('Is "NaN" coerced to `NaN`?', () => {
-      expect(this.coerce("NaN")).toBe(NaN);
+    test('Is "NaN" coerce_inputd to `NaN`?', () => {
+      expect(this.coerce_input("NaN")).toBe(NaN);
     });
 
     test('Will `NaN` remain `NaN`?', () => {
-      expect(this.coerce(NaN)).toBe(NaN);
+      expect(this.coerce_input(NaN)).toBe(NaN);
     });
   }
 
@@ -135,12 +135,12 @@ class Coerce_Test {
    *
    */
   testsNull() {
-    test('Is "null" coerced to `null`?', () => {
-      expect(this.coerce("null")).toBe(null);
+    test('Is "null" coerce_inputd to `null`?', () => {
+      expect(this.coerce_input("null")).toBe(null);
     });
 
     test('Will `null` remain `null`?', () => {
-      expect(this.coerce(null)).toBe(null);
+      expect(this.coerce_input(null)).toBe(null);
     });
   }
 
@@ -148,20 +148,20 @@ class Coerce_Test {
    *
    */
   testsNumber() {
-    test('Is "1" coerced to `1`?', () => {
-      expect(this.coerce('1')).toBe(1);
+    test('Is "1" coerce_inputd to `1`?', () => {
+      expect(this.coerce_input('1')).toBe(1);
     });
 
     test('Does `1` remain `1`?', () => {
-      expect(this.coerce(1)).toBe(1);
+      expect(this.coerce_input(1)).toBe(1);
     });
 
-    test('Is "2.5" coerced to `2.5`?', () => {
-      expect(this.coerce('2.5')).toBe(2.5);
+    test('Is "2.5" coerce_inputd to `2.5`?', () => {
+      expect(this.coerce_input('2.5')).toBe(2.5);
     });
 
     test('Does `2.5` remain `2.5`?', () => {
-      expect(this.coerce(2.5)).toBe(2.5);
+      expect(this.coerce_input(2.5)).toBe(2.5);
     });
   }
 
@@ -170,10 +170,10 @@ class Coerce_Test {
    */
   testsString() {
     test('Are strings unaffected by coercion?', () => {
-      expect(this.coerce('string')).toBe('string');
+      expect(this.coerce_input('string')).toBe('string');
     });
     // test('', () => {
-    //   expect(this.coerce()).toStrictEqual();
+    //   expect(this.coerce_input()).toStrictEqual();
     // });
   }
 
@@ -181,16 +181,16 @@ class Coerce_Test {
    *
    */
   testsUndefined() {
-    test('Is "undefined" coerced to `undefined`?', () => {
-      expect(this.coerce("undefined")).toBe(undefined);
+    test('Is "undefined" coerce_inputd to `undefined`?', () => {
+      expect(this.coerce_input("undefined")).toBe(undefined);
     });
 
     test('Will `undefined` remain `undefined`?', () => {
-      expect(this.coerce(undefined)).toBe(undefined);
+      expect(this.coerce_input(undefined)).toBe(undefined);
     });
   }
 }
 
 
-const test_coerce: Coerce_Test = new Coerce_Test();
-test_coerce.runTests();
+const test_coerce_input: Coerce_Test = new Coerce_Test();
+test_coerce_input.runTests();

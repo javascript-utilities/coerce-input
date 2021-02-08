@@ -1,6 +1,6 @@
 const text_input__callback = (event) => {
   const client_input = event.target.value;
-  const coerced_value = Coerce(client_input);
+  const coerced_value = Coerce_Input(client_input);
   const client_text_output = document.getElementById('client__text--output');
 
   const output_list = [

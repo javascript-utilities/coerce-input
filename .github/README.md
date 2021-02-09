@@ -23,6 +23,7 @@ Coerces values into JavaScript object types where available
 
 - [&#x1F9F0; Usage][heading__usage]
   - [NodeJS Examples][heading__nodejs_example]
+  - [Web Application Example][heading__web_application_example]
 
 - [&#x1F5D2; Notes][heading__notes]
 

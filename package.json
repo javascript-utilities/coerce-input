@@ -1,8 +1,8 @@
 {
-  "name": "coerce",
-  "version": "0.0.1",
+  "name": "coerce-input",
+  "version": "0.1.0",
   "description": "Coerces values to JavaScript Objects where possible",
-  "main": "coerce.ts",
+  "main": "coerce-input.js",
   "scripts": {
     "ts-build": "tsc --build",
     "ci-test": "jest --coverage",
@@ -17,8 +17,7 @@
       "__tests__"
     ],
     "collectCoverageFrom": [
-      "__tests__/**.js",
-      "coerce.js"
+      "coerce-input.js"
     ],
     "coveragePathIgnorePatterns": [
       "node_modules/"

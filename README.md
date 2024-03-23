@@ -439,7 +439,7 @@ ______
 
 ```
 Documentation on coercing values into JavaScript object types where available
-Copyright (C) 2020 S0AndS0
+Copyright (C) 2024 S0AndS0
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published

@@ -1,6 +1,6 @@
 {
   "name": "coerce-input",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Coerces values to JavaScript Objects where possible",
   "main": "coerce-input.js",
   "scripts": {

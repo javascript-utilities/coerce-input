@@ -8,7 +8,8 @@
     "ci-test": "jest --coverage",
     "ci-build": "npm run ts-build && npm run ci-test",
     "ci-watch": "jest --coverage --watchAll",
-    "py-serve": "python3 -m http.server --bind localhost 8080"
+    "py-serve": "python3 -m http.server --bind localhost 8080",
+    "prep-publish": "npm install --save --save-exact && npm run ci-build && npm publish --dry-run && git status"
   },
   "jest": {
     "verbose": true,

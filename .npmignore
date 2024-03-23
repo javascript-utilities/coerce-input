@@ -1,0 +1,5 @@
+.github
+.travis.yml
+__tests__
+ts
+tsconfig.json

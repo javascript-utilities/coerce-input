@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/javascript-utilities/coerce.git"
+    "url": "git+ssh://git@github.com/javascript-utilities/coerce-input.git"
   },
   "keywords": [
     "Coerce",
@@ -46,9 +46,9 @@
   "author": "S0AndS0",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/javascript-utilities/coerce/issues"
+    "url": "https://github.com/javascript-utilities/coerce-input/issues"
   },
-  "homepage": "https://github.com/javascript-utilities/coerce#readme",
+  "homepage": "https://github.com/javascript-utilities/coerce-input#readme",
   "devDependencies": {
     "@types/jest": "^27.0.1",
     "jest": "^27.0.3",

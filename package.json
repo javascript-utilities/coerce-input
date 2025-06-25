@@ -51,8 +51,8 @@
   },
   "homepage": "https://github.com/javascript-utilities/coerce-input#readme",
   "devDependencies": {
-    "@types/jest": "^27.0.1",
-    "jest": "^27.0.3",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.3",
     "ts-jest": "^27.0.3",
     "typescript": "^4.1.3"
   }
